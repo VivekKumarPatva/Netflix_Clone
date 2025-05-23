@@ -16,7 +16,7 @@ body {
 
 .main {
     background-image: url("./Assets/movie_Template/background.jpg");
-    height: 80vh;
+    height: 90vh;
     position: relative;
     background-size: max(1200px, 100vw);
     background-position: center center;
@@ -24,7 +24,7 @@ body {
 }
 
 .main .box {
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     opacity: 0.69;
     position: absolute;
@@ -68,7 +68,7 @@ nav button {
 }
 
 .hero> :first-child {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--primary-font);
     font-weight: 700;
     font-size: 40px;
     text-align: center;
@@ -181,19 +181,39 @@ nav button {
 
 }
 
+/*                         Movie template Slide Start Here */
+
 /*                     More reason to join                    */
+
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    height: 35vh;
-    gap: 1vw;
+    padding: 34px;
+}
+
+.container h2 {
+    
+    padding-bottom: 2vh;
+    color: white;
+    text-align: left;
+    font-size: 24px;
+    margin: 0 7vw;
 }
 
 .container-layout {
+    
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.container-layout h2 {
+    color: white;
+    font-size: 24px;
+}
+
+.container-layout-style {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: 35vh;
     width: 19.5vw;
     border-radius: 1.5vw;
     background: radial-gradient(500% 500% at 50% -420%,
@@ -201,21 +221,21 @@ nav button {
             rgba(174, 11, 11, 0.161) 100%), black;
 }
 
-.container-layout div{
+.container-layout-style div {
     display: flex;
     flex-direction: column;
     padding: 1vw;
 }
 
-.container-layout h3 {
+.container-layout-style h3 {
     font-family: "Segoe UI", sans-serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 1.25rem;
     color: white;
     padding-top: 2vh;
 }
 
-.container-layout P {
+.container-layout-style P {
     font-family: "Segoe UI", sans-serif;
     font-weight: 600;
     font-size: 16px;
@@ -223,10 +243,15 @@ nav button {
     margin-top: 1.8vh;
 }
 
-.container-layout :nth-child(2){
+.container-layout-style :nth-child(2) {
     display: flex;
     align-items: flex-end;
 }
+
+
+/*            frequently Asked Question (Portion)         */
+
+
 
 /*            frequently Asked Question (Portion)         */
 
@@ -242,9 +267,11 @@ nav button {
 }
 
 .faq h2 {
-    text-align: center;
-    font-size: 48px;
+    max-width: 80.5vw;
+    font-size: 24px;
     color: white;
+    margin: 0px auto;
+    padding: 0 24px;
 }
 
 .faqbox {
