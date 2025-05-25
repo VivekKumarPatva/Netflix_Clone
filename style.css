@@ -182,6 +182,68 @@ nav button {
 }
 
 /*                         Movie template Slide Start Here */
+.trending-container {
+    padding: 34px;
+
+}
+
+.trending-container-layout {
+    display: flex;
+    justify-content: center;
+}
+
+
+.trending-container h2 {
+    color: white;
+    font-size: 24px;
+    padding-bottom: 2vh;
+    margin: 0 7vw;
+}
+
+.trending-container-style {
+    height: auto;
+    width: 78vw;
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5vw;
+    padding-bottom: 1vh;
+    scroll-snap-type: x mandatory;
+}
+
+.movie-card {
+    display: relative;
+    flex: 0 0 auto;
+    width: 200px;
+    scroll-snap-align: start;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    padding: 0.4rem;
+    transition: transform 0.3s;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.movie-card span{
+    position: absolute;
+        top: 8px;
+        left: 8px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-weight: bold;
+        padding: 4px 8px;
+        border-radius: 8px;
+        font-size: 14px;
+        z-index: 1;
+}
 
 /*                     More reason to join                    */
 
@@ -190,7 +252,7 @@ nav button {
 }
 
 .container h2 {
-    
+
     padding-bottom: 2vh;
     color: white;
     text-align: left;
@@ -199,7 +261,7 @@ nav button {
 }
 
 .container-layout {
-    
+
     display: flex;
     justify-content: center;
     gap: 1vw;
