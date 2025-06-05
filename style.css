@@ -20,21 +20,16 @@ body {
 
 .main {
     background-image: url("./Assets/movie_Template/background.jpg");
-    height: 90vh;
+    height: 95vh;
     position: relative;
     background-size: max(1200px, 100vw);
     background-position: center center;
     background-repeat: no-repeat;
 }
 
-.main .box {
-    height: 90vh;
-    width: 100%;
-    opacity: 0.69;
-    position: absolute;
-    top: 0;
-    background-color: black;
-}
+
+/*                       Nav bar Portion         */
+
 
 nav {
     display: flex;
@@ -47,11 +42,48 @@ nav {
     padding-top: 2vh;
 }
 
-nav img {
-    color: red;
-    width: 150px;
+nav span img {
     position: relative;
+    width: 125px;
     z-index: 10;
+}
+
+.langButton select {
+    width: 120px;
+    appearance: none;
+    padding: 7px 35px;
+    font-weight: bold;
+    color: white;
+    background: none;
+    border-color: rgba(128, 128, 128, 0.7);
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.langButton {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(23, 23, 23, 0.7);
+}
+
+.langButton :first-child {
+    position: absolute;
+    ;
+    z-index: 1;
+    padding-left: 7px;
+}
+
+.langButton :last-child {
+    position: absolute;
+    padding-left: 90px;
+    z-index: 1;
+}
+
+nav div {
+    display: flex;
+    gap: 10px;
 }
 
 nav button {
@@ -59,8 +91,63 @@ nav button {
     z-index: 10;
 }
 
+@media screen and (max-width:320px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 0;
+    }
+}
+
+@media screen and (max-width:620px) {
+    .langButton select {
+        width: 15px;
+        padding: 7px 25px;
+    }
+
+    .langButton :first-child {
+        width: 1rem;
+        padding-left: 10px;
+    }
+
+    .langButton :last-child {
+        padding-left: 26px;
+        width: 1.2rem;
+    }
+
+    nav span img {
+        width: 6rem;
+    }
+
+    nav {
+        padding: 0 1.5rem;
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:959px) {
+    nav img {
+        /* width: 90px; */
+    }
+
+}
+
+
+/*               banner text area protion                */
+
+.main .box {
+    height: 95vh;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+
 .hero {
-    height: calc(100% - 62px);
+    height: calc(100% - 95px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -72,7 +159,7 @@ nav button {
 }
 
 .hero-style {
-    width: 35vw;
+    width: 35rem;
 }
 
 .hero-style h1 {
@@ -90,12 +177,13 @@ nav button {
 }
 
 .hero-style-inner {
+
     display: flex;
     flex-direction: column;
     width: 35vw;
 }
 
-.hero-style-inner> p {
+.hero-style-inner>p {
     font-family: var(--secondary-text);
     font-size: 16px;
     font-weight: 500;
@@ -104,7 +192,7 @@ nav button {
 }
 
 
- .hero-buttons {
+.hero-buttons {
     display: flex;
     gap: 10px;
     justify-content: space-between;
@@ -112,13 +200,16 @@ nav button {
 
 
 .btn {
-    padding: 3px 8px;
+    padding: 7px 8px;
     font-weight: bold;
     color: white;
-    background-color: rgba(199, 188, 188, 0);
-    border: 1px solid white;
+    background: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 125px;
+    z-index: 10;
+    border-color: rgba(128, 128, 128, 0.7);
+
 }
 
 
@@ -127,86 +218,228 @@ nav button {
     background-color: red;
     color: white;
     height: fit-content;
-   padding: 10px;
+    padding: 10px;
     font-size: 20px;
     border-radius: 4px;
-    flex-basis: 15vw;
+    flex-basis: 15rem;
 }
 
 .hero-buttons input {
-   height: fit-content;
-   padding: 14px;
-   flex-basis: 25vw;
+    height: fit-content;
+    padding: 14px;
+    flex-basis: 25rem;
     font-weight: 900;
     font-size: 12px;
     border-radius: 4px;
+    border-color: rgba(128, 128, 128, 0.7);
     background-color: rgba(23, 23, 23, 0.7);
-    border: 1px solid rgba(rgb(255, 255, 255, 0.5), green, blue, alpha);
-} 
+
+}
 
 .btn-red-sm {
     background-color: red;
     color: white;
+    width: 80px;
 }
 
+@media screen and (max-width: 599px) {
+
+    .hero-style {
+        width: auto;
+    }
+
+    .hero-style h1 {
+        font-size: 2rem;
+        margin-bottom: .5rem;
+    }
+
+    .hero-style :nth-child(2) {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons input {
+        flex-basis: 1rem;
+    }
+
+    .hero-style-inner {
+        width: auto;
+    }
+
+    .btn-red {
+        width: 10rem;
+        align-self: center;
+        flex-basis: 1rem;
+    }
+
+    nav {
+        padding-top: .7rem;
+    }
+    
+        .main {
+            height: 70vh;
+        }
+    
+        .main .box {
+            height: 70vh;
+        }
+    
+        .hero-style h1 {
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 0;
+        }
+    
+        .hero-style :nth-child(2) {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+    
+        .hero-style-inner>p {
+            font-family: var(--secondary-text);
+            font-size: 16px;
+            font-weight: 500;
+            color: white;
+            margin-bottom: 1.2rem;
+        }
+
+}
+
+@media screen and (min-width:600px) and (max-width:960px) {
+
+    .hero {
+        height: calc(100% - 140px);
+    }
+
+    .main {
+        height: 36rem;
+    }
+
+    .main .box {
+        height: 36rem;
+    }
+
+    .hero-style {
+        width: 500px;
+    }
+
+    .hero-style h1 {
+        font-weight: 700;
+        font-size: 2.1rem;
+        margin-bottom: 0;
+    }
+
+    .hero-style :nth-child(2) {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-style-inner {
+        width: 500px;
+    }
+
+    .hero-style-inner>p {
+        font-family: var(--secondary-text);
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        margin-bottom: 1.2rem;
+    }
+}
+
+@media screen and (min-width:960px) and (max-width:1279px) {
+    .hero {
+        height: calc(100% - 120px);
+    }
+
+    .main {
+        height: 95vh;
+    }
+
+    .main .box {
+        height: 95vh;
+    }
+
+    .hero-style {
+        width: 500px;
+    }
+
+    .hero-style h1 {
+        font-weight: 700;
+        font-size: 2.7rem;
+        margin-bottom: 0;
+    }
+
+    .hero-style :nth-child(2) {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-style-inner {
+        width: 500px;
+    }
+
+    .hero-style-inner>p {
+        font-family: var(--secondary-text);
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        margin-bottom: 1.2rem;
+    }
+}
 
 
 /*             Seperation Portion bw bg-image and hero portio          */
 
 .inner-curve {
     position: relative;
-    box-sizing: border-box;
-    display: block;
-    overflow-x: hidden;
+    overflow: hidden;
     height: 6.25rem;
     z-index: 1;
-    unicode-bidi: isolate;
-    background-color: #fff;
+    box-sizing: border-box;
 }
 
 .curve-container {
+    width: 200%;
+    left: -50%;
+    height: 100%;
     box-sizing: border-box;
-    display: block;
-    unicode-bidi: isolate;
-    color: white;
+    position: absolute;
+    top: 0;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    border: solid .25rem transparent;
+    border-bottom: none;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    background: linear-gradient(to right, rgba(33, 13, 22, 1) 16%, rgba(184, 40, 105, 1), rgba(229, 9, 20, 1), rgba(184, 40, 105, 1), rgba(33, 13, 22, 1) 84%);
+    background-clip: padding-box;
 }
 
 .curve-design {
-    position: absolute;
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    width: 200%;
     height: 100%;
-    left: -50%;
     margin: auto;
-    top: 0;
     border: solid .25rem transparent;
-    border-bottom: none;
+    width: 200%;
     border-top-left-radius: 50% 100%;
     border-top-right-radius: 50% 100%;
     background: radial-gradient(50% 500% at 50% -420%,
             rgba(64, 97, 231, 0.4) 80%,
             rgba(0, 0, 0, 0.1) 100%), black;
     background-clip: padding-box;
-    unicode-bidi: isolate;
-    color: white;
 }
 
-.curve-container-design {
-    margin-top: 1.375em;
-    position: relative;
-    z-index: 2;
-    box-sizing: border-box;
-    display: block;
-    unicode-bidi: isolate;
-    color: white;
 
-}
+/*                        Movie template Slide Start Here */
 
-/*                         Movie template Slide Start Here */
 .trending-container {
     padding: 34px;
+    padding-top: 0;
 
 }
 
@@ -224,14 +457,24 @@ nav button {
     margin: 0 7vw;
 }
 
+/* .scroll-container {
+    overflow: auto;   
+    scrollbar-width: none; 
+    -ms-overflow-style: none; }
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+} */
+
 .trending-container-style {
     height: auto;
     width: 78vw;
     display: flex;
-    overflow-x: auto;
+    overflow-x:auto;
     gap: 1.5vw;
     padding-bottom: 1vh;
     scroll-snap-type: x mandatory;
+    -ms-overflow-style: none;
 }
 
 .movie-card {
@@ -268,6 +511,18 @@ nav button {
     font-size: 125px;
 }
 
+@media screen and (max-width: 960px) {
+    .trending-container {
+        padding: 1.5rem;
+        padding-top: 0;
+    }
+
+    .trending-container h2 {
+        padding-bottom: 2vh;
+        margin: 0 0;
+    }
+}
+
 
 /*                     More reason to join                    */
 
@@ -295,7 +550,7 @@ nav button {
 .container-layout-style {
     display: flex;
     flex-direction: column;
-    height: 35vh;
+    height: 18rem;
     width: 19.5vw;
     border-radius: 1.5vw;
     background: radial-gradient(500% 500% at 50% -420%,
@@ -321,7 +576,7 @@ nav button {
     font-family: "Segoe UI", sans-serif;
     font-weight: 600;
     font-size: 16px;
-    color: #ffffff80;
+    color: #b4b2ba;
     margin-top: 1.8vh;
 }
 
@@ -330,6 +585,31 @@ nav button {
     align-items: flex-end;
 }
 
+@media screen and (max-width: 960px) {
+    .container-layout {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .container-layout-style {
+        flex-basis: 10rem;
+        width: 100%;
+        border-radius: 1rem;
+        justify-content: space-between;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .container h2 {
+        margin: 0 0;
+    }
+
+    .container-layout-style div {
+        padding: 0 1rem;
+    }
+}
 
 /*            frequently Asked Question (Portion)         */
 
@@ -355,25 +635,44 @@ nav button {
 
 .faqbox {
     transition: all 0s ease-out;
-    font-family: 24px;
+    font-family: var(--secondary-text);
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #2d2d2d;
     color: white;
-    padding: 24px;
-    max-width: 78vw;
-    margin: 34px auto;
+    padding: 32px;
+    width: 78vw;
+    margin: 10px auto;
     cursor: pointer;
 }
- 
+
+@media screen and (max-width: 960px) {
+
+    .faq {
+        padding: 1.5rem;
+    }
+
+    .faqbox {
+        margin: .5rem 0;
+        padding: 1.3rem;
+        font-size: 1.2rem;
+        width: auto;
+    }
+
+    .faq h2 {
+        margin: 0;
+        padding: 0 0 .5rem;
+        font-size: 1.2rem;
+    }
+}
 
 /*              button-membership-container              */
 
-.button-membership-container{
+.button-membership-container {
     display: flex;
     justify-content: center;
-padding: 0 15vw;
+    padding: 0 15vw;
 }
 
 #membership-zone {
@@ -381,13 +680,35 @@ padding: 0 15vw;
     text-align: center;
 }
 
-#membership-email-button input{
+#membership-email-button input {
     flex-basis: 32vw;
     height: 30px;
 }
 
-#membership-email-button button{
+#membership-email-button button {
     height: 60px;
+}
+
+@media screen and (max-width: 960px) {
+    #membership-zone {
+        width: 100%;
+    }
+
+    .button-membership-container {
+        padding: 1.5rem;
+    }
+
+    .hero-buttons input {
+        flex-grow: 1;
+    }
+
+    #membership-email-button button {
+        align-self: flex-start;
+    }
+
+        #membership-email-button input {
+            flex-basis:1rem;
+     }
 }
 
 
@@ -402,7 +723,8 @@ footer {
 
 footer .questions {
     font-family: var(--secondary-text);
-font-weight: 400;
+    font-weight: 400;
+    color: #b3b3b3;
     padding: 34px 0px;
 }
 
@@ -414,11 +736,98 @@ font-weight: 400;
 
 .footer a {
     font-family: 10px;
-    color: white;
+    color: #b3b3b3;
 }
 
 .footer-item {
     display: flex;
     flex-direction: column;
     gap: 23px;
+    font-size: .8rem;
+}
+
+.footerLangButton {
+    margin: auto;
+    padding: 34px;
+    width: 82vw;
+}
+
+.termsAndConditons {
+    width: 82vw;
+    margin: auto;
+    padding: 34px;
+    color: #b3b3b3;
+    font-family: var(--primary-text);
+}
+
+.termsAndConditons> :first-child {
+    padding: 34px;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.termsAndConditons>:last-child {
+    font-size: 12px;
+    padding-top: 15px;
+    margin-bottom: 4rem;
+}
+
+.termsAndConditons> :nth-child(2) {
+    font-size: 12px;
+}
+
+.termsAndConditons a {
+    color: #448ef4;
+}
+
+
+@media screen and (max-width: 600px) {
+    footer {
+        margin: 0;
+        padding: 1.5rem;
+        width: auto;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .footer-item {
+        gap: 1.25rem;
+
+    }
+
+    .termsAndConditons {
+        padding: 1.5rem;
+        margin: 0;
+    }
+
+    .termsAndConditons>:last-child {
+        margin-bottom: 9rem;
+        font-weight: 500;
+    }
+
+    .footerLangButton {
+        padding: 1.5rem;
+        margin: 0;
+    }
+
+    #footerLangButtonCustom select {
+        width: 120px;
+    }
+
+    #footerLangButtonCustom .langButton :first-child {
+        position: absolute;
+        z-index: 1;
+        padding-left: 7px;
+    }
+
+    #footerLangButtonCustom .langButton :last-child {
+        position: absolute;
+        padding-left: 90px;
+        z-index: 1;
+    }
+
+
 }
